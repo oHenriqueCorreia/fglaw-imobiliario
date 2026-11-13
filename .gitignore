@@ -1,0 +1,9 @@
+# Pacotes gerados para envio manual
+*.zip
+
+# Imagens locais de prévia e revisão
+homepage.png
+objections-preview.png
+
+# Configuração local de publicação
+.openai/

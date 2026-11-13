@@ -1,0 +1,145 @@
+/* Ajustes de seções que substituem composições anteriores. */
+.objections {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #fbfaf8 0%, var(--sand) 100%);
+}
+
+.objections::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  top: 90px;
+  right: -250px;
+  border: 1px solid rgba(23, 57, 44, .09);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.objections-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.objections-heading {
+  max-width: 900px;
+  margin: 0 auto 58px;
+  text-align: center;
+}
+
+.objections-heading h2 {
+  margin-bottom: 22px;
+}
+
+.objections-intro {
+  max-width: 660px;
+  margin: 0 auto;
+  color: #64796c;
+  font-size: 1.08rem;
+}
+
+.objections-inner .objection-list {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 0;
+}
+
+.objections-inner .objection-list article {
+  grid-column: span 2;
+  min-height: 225px;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  align-content: start;
+  gap: 17px;
+  border: 1px solid rgba(23, 57, 44, .1);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, .88);
+  box-shadow: 0 14px 32px rgba(16, 40, 31, .055);
+}
+
+.objections-inner .objection-list article:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.objections-inner .objection-list article:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+.objections-inner .objection-list article > span {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  box-shadow: 0 9px 18px rgba(23, 57, 44, .16);
+  font-size: .75rem;
+  font-weight: 600;
+}
+
+.objections-inner .objection-list h3 {
+  margin-bottom: 10px;
+  color: var(--ink);
+  font-size: 1.02rem;
+  font-weight: 550;
+  line-height: 1.4;
+}
+
+.objections-inner .objection-list p {
+  margin-bottom: 0;
+  color: #718376;
+  font-size: .87rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+  .objections-inner .objection-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .objections-inner .objection-list article,
+  .objections-inner .objection-list article:nth-child(4) {
+    grid-column: auto;
+  }
+
+  .objections-inner .objection-list article:nth-child(5) {
+    grid-column: 1 / -1;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .objections-heading {
+    margin-bottom: 38px;
+    text-align: left;
+  }
+
+  .objections-intro {
+    font-size: 1rem;
+  }
+
+  .objections-inner .objection-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .objections-inner .objection-list article,
+  .objections-inner .objection-list article:nth-child(4),
+  .objections-inner .objection-list article:nth-child(5) {
+    grid-column: auto;
+    min-height: auto;
+    padding: 20px;
+    grid-template-columns: 36px minmax(0, 1fr);
+    gap: 13px;
+  }
+
+  .objections-inner .objection-list article > span {
+    width: 36px;
+    height: 36px;
+  }
+
+}
